@@ -152,8 +152,9 @@ public class MainActivity extends AppCompatActivity {
                 urlConnection.setRequestMethod("GET");
                 urlConnection.setReadTimeout(10000 /* milliseconds */);
                 urlConnection.setConnectTimeout(15000 /* milliseconds */);
+//                Log.e(LOG_TAG, "good ++++++++++++++++++++++++++");
                 urlConnection.connect();
-
+                Log.e(LOG_TAG, "good ++++++++++++++++++++++++++");
                 // If the request was successful (response code 200),
                 // then read the input stream and parse the response.
                 if (urlConnection.getResponseCode() == 200) {
@@ -223,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
                     return new Event(title, time, tsunamiAlert);
                 }
             } catch (JSONException e) {
-                Log.e(LOG_TAG, "Problem parsing the earthquake JSON results", e);
+                Log.e(LOG_TAG, "Problem parsing the earthquake JSON results..", e);
             }
             return null;
         }
